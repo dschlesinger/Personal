@@ -1,6 +1,8 @@
 # Personal
 Personal Repository
 
+#Projects can be found under different branches
+
 1. Number_recognizer, uses Flask and tensorflow python to implement machine learning on the web
 2. GAN, uses the mnist and A-Z datasets* to recreate training images, final form was a text to handwritten converter
 
