@@ -1,4 +1,4 @@
-# Personal
+# Number Recognizer
 Personal Repository
 
 This is a number recognizer I built on the web using the Flask API for python. 
