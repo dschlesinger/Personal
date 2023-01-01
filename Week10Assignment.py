@@ -116,40 +116,7 @@ def reshape_dataset(X_train, y_train, X_test, y_test):
     y_test = to_categorical(y_test)
     return (X_train, y_train), (X_test, y_test)
 
-def Secure_Voice_Channel(func):
-    """Define Secure_Voice_Channel decorator."""
-    def execute_func(*args, **kwargs):
-        print('Established Secure Connection.')
-        print("Ended Secure Connection.")
-        returned_value = func(*args, **kwargs)
-        return returned_value
-    return execute_func
 
-@Secure_Voice_Channel
-
-#Extra credit assignment
-def Password_Auth(func):
-    def Check(*args, **kwargs):
-        username_list = ["Me", "You", "Them"]
-        cont = True
-        print("Restricted acsess; input credentials to continue")
-        while cont == True:
-            user_guess = str(input("Username: "))
-            for i in username_list:
-                if i == user_guess:
-                    Name = i
-                    print("Hello " + Name + ", user accepted.")
-                    pasw = getpass()
-                    if pasw == "12345":
-                        print("Verified Authentication; you may continue")
-                        cont = False
-                    else:
-                        print("Failed Authentication; restart")
-
-        returned_value = func(*args, **kwargs)
-        return returned_value
-    return Check
-#@Password_Auth
 
 class GAN():
     def init(self, input_shape=(28,28,1), rand_vector_shape=(100,),
